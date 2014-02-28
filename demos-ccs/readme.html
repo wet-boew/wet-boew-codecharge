@@ -1,28 +1,33 @@
-<h1>INTRODUCTION</h1>
+<h2>Introduction</h2>
+<h3>About wet-boew-codecharge</h3>
+The goal of the wet-boew-codecharge subproject is to provide ready-to-use clf compliant design templates for CodeChargeStudio Tool.
+<h3>About CodeChargeStudio</h3>
+<a href="http://www.yessoftware.com/index2.php">CodeChargeStudio</a> is a mature, low cost and polyvalent Rapid Application Development (RAD) tool that facilitates the development and 
+re-use of web based data-driven application in the government, supporting many databases (Oracle, DB2, postgresSQL, MySQL, ...) 
+and development languages (.NET, C##, php, perl, ...) in a single COTS package.
+<p>
+<h3>About the demo</h3>
+This folder contains a demo application showcasing the first clf Design Template contribution of the wet-boew-codecharge subproject.
+The first design template provided is the theme-gcwu-intranet. The Design Template can be selected dynamically at runtime, thus permit 
+the theme presented to selected based on network source (intranet or internet) or department source (DND, RCMP, CSA, TB,...).
 
-
-This folder contains demo applications generated with CodeChargeStudio, distributed under MIT or GPL2 license.
-There are meant to showcase the new clf Design Template contribution of this wet-boew subproject.
-The new Design component facilitates the generation of clf compliant web applications by encapsulating the common look-and-feel 
-in a user language independent template.
-
-Applications created with CodeChargeStudio can be generated for several different OS, database, and programming languages.
-However, the demos provided herein have been generated for use with only one environment configuration: Linux Apache MySQL PHP (LAMP). 
-Generation of the demo in any other combination requires (as a minimum) a licensed CodeChargeStudio application.
-
+<p>Although applications created with CodeChargeStudio can be generated for several different OS, database, and programming languages, 
+the demo provided herein has been generated for use with only one possible environment configuration: Linux Apache MySQL PHP (LAMP). 
+Generation of the demo in any other combination requires a license of CodeChargeStudio application and may require some additional work.
+<p>
 See each demo change.log for their features and bug fixes.
 
-<h2>DETAILS</h2>
-
-Directory demos-ccs contains the run-time version of each demos, generated directly from CCS. Ready-to-run as is on a lamp server.
-Directory dist-ccs contains the source code version of each demos, and of the contributed component. CodeChargeStudio required for changes.
-
-
-Demo Naming convention
-<name>-<os>-<dbms>-<language> 	: Application name, followed by the Operating System, dbms and server-side language selected for build.
-
-Example
-basic-linux-mysql-php 		: Basic application demo generated for a LAMP environment.
+<h3>Directory Structure</h3>
+<ul>Directory demos-ccs contains the run-time version of each demos, generated directly from CCS. Ready-to-run as is on a lamp server.</ul>
+<ul>Directory dist-ccs contains the source code version of each demos, and a separate copy of the Design template.</ul>
+<p>
+<h3>Demo Naming convention</h3>
+Due to the versatile build capability of CodeChargeStudio, each demo is identified accoridng to its intended environment configuration at build:<br>
+<code>
+name-os-dbms-lang: Where name=Application name, os=operating system,dbms=database used and lang=server-side language selected for build.
+<br>
+Example:<br>
+<quote>basic-linux-mysql-php</quote> 		: Basic application demo generated for Linux OS, using MySQL dbms, and server-side language php.
 
 
 
