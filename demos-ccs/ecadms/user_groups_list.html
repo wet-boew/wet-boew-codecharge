@@ -1,0 +1,126 @@
+
+<!-- BEGIN Panel Head -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>user_groups</title>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-EBAA1BDB
+    $('body').ccsBind(function() {
+        features["ContentPanel1UpdatePanel1"] = $('*:ccsControl(Content, Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-0FEC79D0
+    params["ContentPanel1UpdatePanel1"] = {
+        name: "ContentPanel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-D9F0AE29
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["ContentPanel1UpdatePanel1"]);
+    });
+//End Feature Init
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record user_groupsSearch -->
+<form id="ContentPanel1user_groupsSearch" method="post" action="{Action}" name="{HTMLFormName}">
+  <h2>{res:Search_Form}</h2>
+ 
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentPanel1user_groupsSearchErrorBlock">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr>
+      <td><label for="ContentPanel1user_groupsSearchs_group_name">{res:group_name}</label></td> 
+      <td><input type="text" name="{s_group_name_Name}" value="{s_group_name}" maxlength="50" size="50" id="ContentPanel1user_groupsSearchs_group_name"></td> 
+    </tr>
+ 
+    <tr>
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="submit" value="{res:CCS_Search}" alt="{res:CCS_Search}" id="ContentPanel1user_groupsSearchButton_DoSearch" class="Button"><!-- END Button Button_DoSearch --></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record user_groupsSearch --><br>
+<!-- BEGIN Grid user_groups -->
+<h2>{res:user_groups_GridForm}</h2>
+ 
+<table>
+  <tr>
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_group_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1user_groupsSorter_group_id">{res:group_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_group_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_group_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1user_groupsSorter_group_name">{res:group_name}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_group_name --></th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr>
+    <td style="text-align:right;"><a href="{group_id_Src}" id="ContentPanel1user_groupsgroup_id_{user_groups:rowNumber}">{group_id}</a>&nbsp;</td> 
+    <td>{group_name}&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td colspan="2">{res:CCS_NoRecords}</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr>
+    <td colspan="2"><a href="{user_groups_Insert_Src}" id="ContentPanel1user_groupsuser_groups_Insert">{res:CCS_InsertLink}</a>&nbsp; 
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+      <select name="{FormName}PageSize" style="VERTICAL-ALIGN: middle;" data-grid-size="{FormName}">
+        <option value="">-</option>
+ {PageSize_Options} 
+      </select>
+ 
+      <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+</table>
+<!-- END Grid user_groups --><br>
+<!-- END Panel Panel1 --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;<!-- END Panel HeaderSidebar -->

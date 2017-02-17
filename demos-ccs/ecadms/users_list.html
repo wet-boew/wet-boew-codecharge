@@ -1,0 +1,428 @@
+
+<!-- BEGIN Panel Head -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>users</title>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-EBAA1BDB
+    $('body').ccsBind(function() {
+        features["ContentPanel1UpdatePanel1"] = $('*:ccsControl(Content, Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-0FEC79D0
+    params["ContentPanel1UpdatePanel1"] = {
+        name: "ContentPanel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-D9F0AE29
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["ContentPanel1UpdatePanel1"]);
+    });
+//End Feature Init
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record usersSearch -->
+<form id="ContentPanel1usersSearch" method="post" action="{Action}" name="{HTMLFormName}">
+  <h2>{res:Search_Form}</h2>
+ 
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentPanel1usersSearchErrorBlock">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_user_login">{res:user_login}</label></td> 
+      <td><input type="text" name="{s_user_login_Name}" value="{s_user_login}" maxlength="20" size="20" id="ContentPanel1usersSearchs_user_login"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_first_name">{res:first_name}</label></td> 
+      <td><input type="text" name="{s_first_name_Name}" value="{s_first_name}" maxlength="50" size="50" id="ContentPanel1usersSearchs_first_name"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_last_name">{res:last_name}</label></td> 
+      <td><input type="text" name="{s_last_name_Name}" value="{s_last_name}" maxlength="50" size="50" id="ContentPanel1usersSearchs_last_name"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_title">{res:title}</label></td> 
+      <td><input type="text" name="{s_title_Name}" value="{s_title}" maxlength="50" size="50" id="ContentPanel1usersSearchs_title"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_phone_home">{res:phone_home}</label></td> 
+      <td><input type="text" name="{s_phone_home_Name}" value="{s_phone_home}" maxlength="50" size="50" id="ContentPanel1usersSearchs_phone_home"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_phone_work">{res:phone_work}</label></td> 
+      <td><input type="text" name="{s_phone_work_Name}" value="{s_phone_work}" maxlength="50" size="50" id="ContentPanel1usersSearchs_phone_work"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_phone_day">{res:phone_day}</label></td> 
+      <td><input type="text" name="{s_phone_day_Name}" value="{s_phone_day}" maxlength="20" size="20" id="ContentPanel1usersSearchs_phone_day"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_phone_cell">{res:phone_cell}</label></td> 
+      <td><input type="text" name="{s_phone_cell_Name}" value="{s_phone_cell}" maxlength="50" size="50" id="ContentPanel1usersSearchs_phone_cell"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_phone_evening">{res:phone_evening}</label></td> 
+      <td><input type="text" name="{s_phone_evening_Name}" value="{s_phone_evening}" maxlength="20" size="20" id="ContentPanel1usersSearchs_phone_evening"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_fax">{res:fax}</label></td> 
+      <td><input type="text" name="{s_fax_Name}" value="{s_fax}" maxlength="20" size="20" id="ContentPanel1usersSearchs_fax"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_email">{res:email}</label></td> 
+      <td><input type="text" name="{s_email_Name}" value="{s_email}" maxlength="50" size="50" id="ContentPanel1usersSearchs_email"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_notes">{res:notes}</label></td> 
+      <td><input type="text" name="{s_notes_Name}" value="{s_notes}" maxlength="250" size="50" id="ContentPanel1usersSearchs_notes"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_card_number">{res:card_number}</label></td> 
+      <td><input type="text" name="{s_card_number_Name}" value="{s_card_number}" maxlength="50" size="50" id="ContentPanel1usersSearchs_card_number"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_card_expire_date">{res:card_expire_date}</label></td> 
+      <td><input type="text" name="{s_card_expire_date_Name}" value="{s_card_expire_date}" maxlength="10" size="10" id="ContentPanel1usersSearchs_card_expire_date"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_city">{res:city}</label></td> 
+      <td><input type="text" name="{s_city_Name}" value="{s_city}" maxlength="30" size="30" id="ContentPanel1usersSearchs_city"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_zip">{res:zip}</label></td> 
+      <td><input type="text" name="{s_zip_Name}" value="{s_zip}" maxlength="10" size="10" id="ContentPanel1usersSearchs_zip"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_address1">{res:address1}</label></td> 
+      <td><input type="text" name="{s_address1_Name}" value="{s_address1}" maxlength="250" size="50" id="ContentPanel1usersSearchs_address1"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_address2">{res:address2}</label></td> 
+      <td><input type="text" name="{s_address2_Name}" value="{s_address2}" maxlength="50" size="50" id="ContentPanel1usersSearchs_address2"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_address3">{res:address3}</label></td> 
+      <td><input type="text" name="{s_address3_Name}" value="{s_address3}" maxlength="50" size="50" id="ContentPanel1usersSearchs_address3"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_ip_add">{res:ip_add}</label></td> 
+      <td><input type="text" name="{s_ip_add_Name}" value="{s_ip_add}" maxlength="50" size="50" id="ContentPanel1usersSearchs_ip_add"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_ip_update">{res:ip_update}</label></td> 
+      <td><input type="text" name="{s_ip_update_Name}" value="{s_ip_update}" maxlength="50" size="50" id="ContentPanel1usersSearchs_ip_update"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_image_url">{res:image_url}</label></td> 
+      <td><input type="text" name="{s_image_url_Name}" value="{s_image_url}" maxlength="64" size="50" id="ContentPanel1usersSearchs_image_url"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentPanel1usersSearchs_user_SSN">{res:user_SSN}</label></td> 
+      <td><input type="text" name="{s_user_SSN_Name}" value="{s_user_SSN}" maxlength="50" size="50" id="ContentPanel1usersSearchs_user_SSN"></td> 
+    </tr>
+ 
+    <tr>
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="submit" value="{res:CCS_Search}" alt="{res:CCS_Search}" id="ContentPanel1usersSearchButton_DoSearch" class="Button"><!-- END Button Button_DoSearch --></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record usersSearch --><br>
+<!-- BEGIN Grid users -->
+<h2>{res:users_GridForm}</h2>
+ 
+<table>
+  <tr>
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_user_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_user_id">{res:user_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_user_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_user_login --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_user_login">{res:user_login}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_user_login --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_first_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_first_name">{res:first_name}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_first_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_last_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_last_name">{res:last_name}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_last_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_title --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_title">{res:title}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_title --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_group_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_group_id">{res:group_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_group_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_phone_home --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_phone_home">{res:phone_home}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_phone_home --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_phone_work --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_phone_work">{res:phone_work}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_phone_work --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_phone_day --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_phone_day">{res:phone_day}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_phone_day --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_phone_cell --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_phone_cell">{res:phone_cell}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_phone_cell --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_phone_evening --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_phone_evening">{res:phone_evening}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_phone_evening --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_fax --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_fax">{res:fax}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_fax --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_email --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_email">{res:email}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_email --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_card_number --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_card_number">{res:card_number}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_card_number --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_card_expire_date --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_card_expire_date">{res:card_expire_date}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_card_expire_date --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_country_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_country_id">{res:country_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_country_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_state_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_state_id">{res:state_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_state_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_city --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_city">{res:city}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_city --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_zip --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_zip">{res:zip}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_zip --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_address1 --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_address1">{res:address1}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_address1 --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_address2 --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_address2">{res:address2}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_address2 --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_address3 --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_address3">{res:address3}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_address3 --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_date_add --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_date_add">{res:date_add}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_date_add --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_date_last_login --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_date_last_login">{res:date_last_login}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_date_last_login --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ip_add --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_ip_add">{res:ip_add}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_ip_add --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ip_update --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_ip_update">{res:ip_update}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_ip_update --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_language_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_language_id">{res:language_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_language_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_image_url --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_image_url">{res:image_url}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_image_url --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_age_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_age_id">{res:age_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_age_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_gender_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_gender_id">{res:gender_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_gender_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_education_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_education_id">{res:education_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_education_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_income_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_income_id">{res:income_id}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_income_id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_user_SSN --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_user_SSN">{res:user_SSN}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_user_SSN --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_user_is_active --><span class="Sorter"><a href="{Sort_URL}" id="ContentPanel1usersSorter_user_is_active">{res:user_is_active}</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="{res:CCS_ASC}"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="{res:CCS_DESC}"><!-- END Desc_On --></span><!-- END Sorter Sorter_user_is_active --></th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr>
+    <td style="text-align:right;"><a href="{user_id_Src}" id="ContentPanel1usersuser_id_{users:rowNumber}">{user_id}</a>&nbsp;</td> 
+    <td>{user_login}&nbsp;</td> 
+    <td>{first_name}&nbsp;</td> 
+    <td>{last_name}&nbsp;</td> 
+    <td>{title}&nbsp;</td> 
+    <td style="text-align:right;">{group_id}&nbsp;</td> 
+    <td>{phone_home}&nbsp;</td> 
+    <td>{phone_work}&nbsp;</td> 
+    <td>{phone_day}&nbsp;</td> 
+    <td>{phone_cell}&nbsp;</td> 
+    <td>{phone_evening}&nbsp;</td> 
+    <td>{fax}&nbsp;</td> 
+    <td>{email}&nbsp;</td> 
+    <td>{card_number}&nbsp;</td> 
+    <td>{card_expire_date}&nbsp;</td> 
+    <td style="text-align:right;">{country_id}&nbsp;</td> 
+    <td style="text-align:right;">{state_id}&nbsp;</td> 
+    <td>{city}&nbsp;</td> 
+    <td>{zip}&nbsp;</td> 
+    <td>{address1}&nbsp;</td> 
+    <td>{address2}&nbsp;</td> 
+    <td>{address3}&nbsp;</td> 
+    <td>{date_add}&nbsp;</td> 
+    <td>{date_last_login}&nbsp;</td> 
+    <td>{ip_add}&nbsp;</td> 
+    <td>{ip_update}&nbsp;</td> 
+    <td style="text-align:right;">{language_id}&nbsp;</td> 
+    <td>{image_url}&nbsp;</td> 
+    <td style="text-align:right;">{age_id}&nbsp;</td> 
+    <td style="text-align:right;">{gender_id}&nbsp;</td> 
+    <td style="text-align:right;">{education_id}&nbsp;</td> 
+    <td style="text-align:right;">{income_id}&nbsp;</td> 
+    <td>{user_SSN}&nbsp;</td> 
+    <td>{user_is_active}&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td colspan="34">{res:CCS_NoRecords}</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr>
+    <td colspan="34"><a href="{users_Insert_Src}" id="ContentPanel1usersusers_Insert">{res:CCS_InsertLink}</a>&nbsp; 
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+      <select name="{FormName}PageSize" style="VERTICAL-ALIGN: middle;" data-grid-size="{FormName}">
+        <option value="">-</option>
+ {PageSize_Options} 
+      </select>
+ 
+      <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+</table>
+<!-- END Grid users --><br>
+<!-- END Panel Panel1 --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;<!-- END Panel HeaderSidebar -->

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+<!-- BEGIN Record Login1 -->
+<form id="Login1" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>{res:CCS_Login_Form_Caption}</h2>
+ 
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="{@error-block}">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr>
+      <td><label for="Login1login">{res:CCS_Login}</label></td> 
+      <td><input type="text" id="Login1login" maxlength="100" value="{login}" name="{login_Name}" size="20"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="Login1password">{res:CCS_Password}</label></td> 
+      <td><input type="password" id="Login1password" maxlength="100" value="{password}" name="{password_Name}" size="20"></td> 
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_DoLogin --><input type="submit" id="Login1Button_DoLogin" alt="{res:CCS_LoginBtn}" value="{res:CCS_LoginBtn}" name="{Button_Name}"><!-- END Button Button_DoLogin --></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record Login1 -->{MenuIncludablePage}
+</body>
+</html>
