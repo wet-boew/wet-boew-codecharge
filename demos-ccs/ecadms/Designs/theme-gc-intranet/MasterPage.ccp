@@ -15,15 +15,10 @@
 			<Events/>
 			<Features/>
 		</ContentPlaceholder>
-		<ContentPlaceholder id="7" name="HeaderSidebar" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="HeaderSidebar">
-			<Components/>
-			<Events/>
-			<Features/>
-		</ContentPlaceholder>
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="MasterPage.php" forShow="True" url="MasterPage.php" comment="//" codePage="utf-8"/>
-</CodeFiles>
+	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
 	<Attributes/>

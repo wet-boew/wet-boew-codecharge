@@ -18,139 +18,7 @@
 									<Attributes/>
 									<Features/>
 								</Button>
-								<TextBox id="6" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_user_login" wizardCaption="{res:user_login}" fieldSource="user_login" wizardIsPassword="False" parentName="usersSearch" caption="{res:user_login}" required="False" unique="False" wizardSize="20" wizardMaxLength="20" PathID="ContentPanel1usersSearchs_user_login">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="7" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_first_name" wizardCaption="{res:first_name}" fieldSource="first_name" wizardIsPassword="False" parentName="usersSearch" caption="{res:first_name}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_first_name">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
 								<TextBox id="8" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_last_name" wizardCaption="{res:last_name}" fieldSource="last_name" wizardIsPassword="False" parentName="usersSearch" caption="{res:last_name}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_last_name">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="9" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_title" wizardCaption="{res:title}" fieldSource="title" wizardIsPassword="False" parentName="usersSearch" caption="{res:title}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_title">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="10" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_phone_home" wizardCaption="{res:phone_home}" fieldSource="phone_home" wizardIsPassword="False" parentName="usersSearch" caption="{res:phone_home}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_phone_home">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="11" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_phone_work" wizardCaption="{res:phone_work}" fieldSource="phone_work" wizardIsPassword="False" parentName="usersSearch" caption="{res:phone_work}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_phone_work">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="12" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_phone_day" wizardCaption="{res:phone_day}" fieldSource="phone_day" wizardIsPassword="False" parentName="usersSearch" caption="{res:phone_day}" required="False" unique="False" wizardSize="20" wizardMaxLength="20" PathID="ContentPanel1usersSearchs_phone_day">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="13" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_phone_cell" wizardCaption="{res:phone_cell}" fieldSource="phone_cell" wizardIsPassword="False" parentName="usersSearch" caption="{res:phone_cell}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_phone_cell">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="14" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_phone_evening" wizardCaption="{res:phone_evening}" fieldSource="phone_evening" wizardIsPassword="False" parentName="usersSearch" caption="{res:phone_evening}" required="False" unique="False" wizardSize="20" wizardMaxLength="20" PathID="ContentPanel1usersSearchs_phone_evening">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="15" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_fax" wizardCaption="{res:fax}" fieldSource="fax" wizardIsPassword="False" parentName="usersSearch" caption="{res:fax}" required="False" unique="False" wizardSize="20" wizardMaxLength="20" PathID="ContentPanel1usersSearchs_fax">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="16" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_email" wizardCaption="{res:email}" fieldSource="email" wizardIsPassword="False" parentName="usersSearch" caption="{res:email}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_email">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="17" visible="Yes" fieldSourceType="DBColumn" dataType="Memo" name="s_notes" wizardCaption="{res:notes}" fieldSource="notes" wizardIsPassword="False" parentName="usersSearch" caption="{res:notes}" required="False" unique="False" wizardSize="50" wizardMaxLength="250" PathID="ContentPanel1usersSearchs_notes">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="18" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_card_number" wizardCaption="{res:card_number}" fieldSource="card_number" wizardIsPassword="False" parentName="usersSearch" caption="{res:card_number}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_card_number">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="19" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_card_expire_date" wizardCaption="{res:card_expire_date}" fieldSource="card_expire_date" wizardIsPassword="False" parentName="usersSearch" caption="{res:card_expire_date}" required="False" unique="False" wizardSize="10" wizardMaxLength="10" PathID="ContentPanel1usersSearchs_card_expire_date">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="20" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_city" wizardCaption="{res:city}" fieldSource="city" wizardIsPassword="False" parentName="usersSearch" caption="{res:city}" required="False" unique="False" wizardSize="30" wizardMaxLength="30" PathID="ContentPanel1usersSearchs_city">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="21" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_zip" wizardCaption="{res:zip}" fieldSource="zip" wizardIsPassword="False" parentName="usersSearch" caption="{res:zip}" required="False" unique="False" wizardSize="10" wizardMaxLength="10" PathID="ContentPanel1usersSearchs_zip">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="22" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_address1" wizardCaption="{res:address1}" fieldSource="address1" wizardIsPassword="False" parentName="usersSearch" caption="{res:address1}" required="False" unique="False" wizardSize="50" wizardMaxLength="250" PathID="ContentPanel1usersSearchs_address1">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="23" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_address2" wizardCaption="{res:address2}" fieldSource="address2" wizardIsPassword="False" parentName="usersSearch" caption="{res:address2}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_address2">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="24" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_address3" wizardCaption="{res:address3}" fieldSource="address3" wizardIsPassword="False" parentName="usersSearch" caption="{res:address3}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_address3">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="25" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_ip_add" wizardCaption="{res:ip_add}" fieldSource="ip_add" wizardIsPassword="False" parentName="usersSearch" caption="{res:ip_add}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_ip_add">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="26" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_ip_update" wizardCaption="{res:ip_update}" fieldSource="ip_update" wizardIsPassword="False" parentName="usersSearch" caption="{res:ip_update}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_ip_update">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="27" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_image_url" wizardCaption="{res:image_url}" fieldSource="image_url" wizardIsPassword="False" parentName="usersSearch" caption="{res:image_url}" required="False" unique="False" wizardSize="50" wizardMaxLength="64" PathID="ContentPanel1usersSearchs_image_url">
-									<Components/>
-									<Events/>
-									<Attributes/>
-									<Features/>
-								</TextBox>
-								<TextBox id="28" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="s_user_SSN" wizardCaption="{res:user_SSN}" fieldSource="user_SSN" wizardIsPassword="False" parentName="usersSearch" caption="{res:user_SSN}" required="False" unique="False" wizardSize="50" wizardMaxLength="50" PathID="ContentPanel1usersSearchs_user_SSN">
 									<Components/>
 									<Events/>
 									<Attributes/>
@@ -340,7 +208,6 @@
 								</Sorter>
 								<Sorter id="81" visible="True" name="Sorter_ip_update" column="ip_update" wizardCaption="{res:ip_update}" wizardSortingType="SimpleDir" wizardControl="ip_update" wizardAddNbsp="False" PathID="ContentPanel1usersSorter_ip_update">
 									<Components/>
-
 									<Events/>
 									<Attributes/>
 									<Features/>
@@ -734,7 +601,7 @@
 	</CodeFiles>
 	<SecurityGroups>
 		<Group id="168" groupID="1"/>
-</SecurityGroups>
+	</SecurityGroups>
 	<CachingParameters/>
 	<Attributes/>
 	<Features/>

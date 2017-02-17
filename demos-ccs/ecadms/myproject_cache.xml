@@ -3,16 +3,16 @@
     <schema SCHEMA_NAME="application" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="myproject" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
-      <table TABLE_NAME="cache" TABLE_TYPE="Table" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+      <table TABLE_NAME="cache" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
         <column COLUMN_NAME="cache_key" ORDINAL_POSITION="1" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="65" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="cache_expiration" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="cache_data" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="CCMemo" NATIVE_TYPE="System.String" MAX_LENGTH="4294967295" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="user_groups" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
+      <table TABLE_NAME="user_groups" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True">
         <column COLUMN_NAME="group_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DEFAULT_VALUE="0" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="group_name" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="users" TABLE_TYPE="Table" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+      <table TABLE_NAME="users" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
         <column COLUMN_NAME="user_id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="user_login" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="user_password" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="" COLUMN_HAS_DEFAULT="True" DESCRIPTION="" full="True" />
