@@ -96,6 +96,7 @@ CCS_UploadComponentNotFound=Le composant de téléchargement vers le serveur {0}
 CCS_UploadingError=Erreur lors du téléchargement du fichier spécifié dans {0} vers le serveur. Description de l'erreur: {1}.
 CCS_UploadingTempFolderError=Erreur lors du téléchargement du fichier spécifié dans {0} vers le dossier temporaire du serveur. Description de l'erreur: {1}.
 CCS_WrongType=Le type de fichier spécifié dans le champ {0} n'est pas autorisé.
+locale=fr
 page_lan_reverse=en
 page_language=Français
 page_language_reverse=English
