@@ -1,4 +1,9 @@
 <?php
+
+//Error reporting @1-8F636958
+error_reporting(E_ALL | E_STRICT);
+//End Error reporting
+
 class clsMenuIncludablePage { //MenuIncludablePage class @1-D537EC6C
 
 //Variables @1-EEEBE252
