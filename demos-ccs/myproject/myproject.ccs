@@ -59,8 +59,8 @@
 	</CodeFiles>
 	<Groups>
 		<Group id="2" name="user" value="1"/>
-<Group id="3" name="Admin" value="10"/>
-</Groups>
+		<Group id="3" name="Admin" value="10"/>
+	</Groups>
 	<Styles/>
 	<CustomButtons/>
 	<Profiles>
@@ -80,9 +80,9 @@
 			<LocaleInfo language="en" country="US" encoding="windows-1252" msValue="1033" booleanFormat="Yes;No" decimalDigits="2" decimalSeparator="." groupSeparator="," monthNames="January;February;March;April;May;June;July;August;September;October;November;December" monthShortNames="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec" weekdayNames="Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday" weekdayShortNames="Sun;Mon;Tue;Wed;Thu;Fri;Sat" shortDate="m/d/yyyy" longDate="dddd, mmmm dd, yyyy" shortTime="h:nn tt" longTime="h:nn:ss tt" firstWeekDay="0" AMDesignator="AM" PMDesignator="PM" weekdayNarrowNames="S;M;T;W;T;F;S"/>
 		</Language>
 		<Language name="fr" defaultCountry="CA" encoding="utf-8">
-<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="3084" phpValue=""/>
-</Language>
-</Languages>
+			<LocaleInfo overrideDateFormats="False" booleanFormat="1;0;" overrideNumberFormats="False" msValue="3084" phpValue=""/>
+		</Language>
+	</Languages>
 	<Events/>
 	<OAuthProviders/>
 </Site>

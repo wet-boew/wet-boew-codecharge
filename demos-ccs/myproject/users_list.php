@@ -49,7 +49,7 @@ class clsRecordusersSearch { //usersSearch Class @4-C4FF86BD
     // Class variables
 //End Variables
 
-//Class_Initialize Event @4-C52BCC5A
+//Class_Initialize Event @4-A35A5210
     function clsRecordusersSearch($RelativePath, & $Parent)
     {
 
@@ -74,117 +74,29 @@ class clsRecordusersSearch { //usersSearch Class @4-C4FF86BD
             $this->FormSubmitted = ($FormName == $this->ComponentName);
             $Method = $this->FormSubmitted ? ccsPost : ccsGet;
             $this->Button_DoSearch = new clsButton("Button_DoSearch", $Method, $this);
-            $this->s_user_login = new clsControl(ccsTextBox, "s_user_login", $CCSLocales->GetText("user_login"), ccsText, "", CCGetRequestParam("s_user_login", $Method, NULL), $this);
-            $this->s_first_name = new clsControl(ccsTextBox, "s_first_name", $CCSLocales->GetText("first_name"), ccsText, "", CCGetRequestParam("s_first_name", $Method, NULL), $this);
             $this->s_last_name = new clsControl(ccsTextBox, "s_last_name", $CCSLocales->GetText("last_name"), ccsText, "", CCGetRequestParam("s_last_name", $Method, NULL), $this);
-            $this->s_title = new clsControl(ccsTextBox, "s_title", $CCSLocales->GetText("title"), ccsText, "", CCGetRequestParam("s_title", $Method, NULL), $this);
-            $this->s_phone_home = new clsControl(ccsTextBox, "s_phone_home", $CCSLocales->GetText("phone_home"), ccsText, "", CCGetRequestParam("s_phone_home", $Method, NULL), $this);
-            $this->s_phone_work = new clsControl(ccsTextBox, "s_phone_work", $CCSLocales->GetText("phone_work"), ccsText, "", CCGetRequestParam("s_phone_work", $Method, NULL), $this);
-            $this->s_phone_day = new clsControl(ccsTextBox, "s_phone_day", $CCSLocales->GetText("phone_day"), ccsText, "", CCGetRequestParam("s_phone_day", $Method, NULL), $this);
-            $this->s_phone_cell = new clsControl(ccsTextBox, "s_phone_cell", $CCSLocales->GetText("phone_cell"), ccsText, "", CCGetRequestParam("s_phone_cell", $Method, NULL), $this);
-            $this->s_phone_evening = new clsControl(ccsTextBox, "s_phone_evening", $CCSLocales->GetText("phone_evening"), ccsText, "", CCGetRequestParam("s_phone_evening", $Method, NULL), $this);
-            $this->s_fax = new clsControl(ccsTextBox, "s_fax", $CCSLocales->GetText("fax"), ccsText, "", CCGetRequestParam("s_fax", $Method, NULL), $this);
-            $this->s_email = new clsControl(ccsTextBox, "s_email", $CCSLocales->GetText("email"), ccsText, "", CCGetRequestParam("s_email", $Method, NULL), $this);
-            $this->s_notes = new clsControl(ccsTextBox, "s_notes", $CCSLocales->GetText("notes"), ccsMemo, "", CCGetRequestParam("s_notes", $Method, NULL), $this);
-            $this->s_card_number = new clsControl(ccsTextBox, "s_card_number", $CCSLocales->GetText("card_number"), ccsText, "", CCGetRequestParam("s_card_number", $Method, NULL), $this);
-            $this->s_card_expire_date = new clsControl(ccsTextBox, "s_card_expire_date", $CCSLocales->GetText("card_expire_date"), ccsText, "", CCGetRequestParam("s_card_expire_date", $Method, NULL), $this);
-            $this->s_city = new clsControl(ccsTextBox, "s_city", $CCSLocales->GetText("city"), ccsText, "", CCGetRequestParam("s_city", $Method, NULL), $this);
-            $this->s_zip = new clsControl(ccsTextBox, "s_zip", $CCSLocales->GetText("zip"), ccsText, "", CCGetRequestParam("s_zip", $Method, NULL), $this);
-            $this->s_address1 = new clsControl(ccsTextBox, "s_address1", $CCSLocales->GetText("address1"), ccsText, "", CCGetRequestParam("s_address1", $Method, NULL), $this);
-            $this->s_address2 = new clsControl(ccsTextBox, "s_address2", $CCSLocales->GetText("address2"), ccsText, "", CCGetRequestParam("s_address2", $Method, NULL), $this);
-            $this->s_address3 = new clsControl(ccsTextBox, "s_address3", $CCSLocales->GetText("address3"), ccsText, "", CCGetRequestParam("s_address3", $Method, NULL), $this);
-            $this->s_ip_add = new clsControl(ccsTextBox, "s_ip_add", $CCSLocales->GetText("ip_add"), ccsText, "", CCGetRequestParam("s_ip_add", $Method, NULL), $this);
-            $this->s_ip_update = new clsControl(ccsTextBox, "s_ip_update", $CCSLocales->GetText("ip_update"), ccsText, "", CCGetRequestParam("s_ip_update", $Method, NULL), $this);
-            $this->s_image_url = new clsControl(ccsTextBox, "s_image_url", $CCSLocales->GetText("image_url"), ccsText, "", CCGetRequestParam("s_image_url", $Method, NULL), $this);
-            $this->s_user_SSN = new clsControl(ccsTextBox, "s_user_SSN", $CCSLocales->GetText("user_SSN"), ccsText, "", CCGetRequestParam("s_user_SSN", $Method, NULL), $this);
         }
     }
 //End Class_Initialize Event
 
-//Validate Method @4-641508F4
+//Validate Method @4-A1E04F88
     function Validate()
     {
         global $CCSLocales;
         $Validation = true;
         $Where = "";
-        $Validation = ($this->s_user_login->Validate() && $Validation);
-        $Validation = ($this->s_first_name->Validate() && $Validation);
         $Validation = ($this->s_last_name->Validate() && $Validation);
-        $Validation = ($this->s_title->Validate() && $Validation);
-        $Validation = ($this->s_phone_home->Validate() && $Validation);
-        $Validation = ($this->s_phone_work->Validate() && $Validation);
-        $Validation = ($this->s_phone_day->Validate() && $Validation);
-        $Validation = ($this->s_phone_cell->Validate() && $Validation);
-        $Validation = ($this->s_phone_evening->Validate() && $Validation);
-        $Validation = ($this->s_fax->Validate() && $Validation);
-        $Validation = ($this->s_email->Validate() && $Validation);
-        $Validation = ($this->s_notes->Validate() && $Validation);
-        $Validation = ($this->s_card_number->Validate() && $Validation);
-        $Validation = ($this->s_card_expire_date->Validate() && $Validation);
-        $Validation = ($this->s_city->Validate() && $Validation);
-        $Validation = ($this->s_zip->Validate() && $Validation);
-        $Validation = ($this->s_address1->Validate() && $Validation);
-        $Validation = ($this->s_address2->Validate() && $Validation);
-        $Validation = ($this->s_address3->Validate() && $Validation);
-        $Validation = ($this->s_ip_add->Validate() && $Validation);
-        $Validation = ($this->s_ip_update->Validate() && $Validation);
-        $Validation = ($this->s_image_url->Validate() && $Validation);
-        $Validation = ($this->s_user_SSN->Validate() && $Validation);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnValidate", $this);
-        $Validation =  $Validation && ($this->s_user_login->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_first_name->Errors->Count() == 0);
         $Validation =  $Validation && ($this->s_last_name->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_title->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_phone_home->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_phone_work->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_phone_day->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_phone_cell->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_phone_evening->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_fax->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_email->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_notes->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_card_number->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_card_expire_date->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_city->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_zip->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_address1->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_address2->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_address3->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_ip_add->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_ip_update->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_image_url->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->s_user_SSN->Errors->Count() == 0);
         return (($this->Errors->Count() == 0) && $Validation);
     }
 //End Validate Method
 
-//CheckErrors Method @4-CDDDFAD0
+//CheckErrors Method @4-7EDCCF43
     function CheckErrors()
     {
         $errors = false;
-        $errors = ($errors || $this->s_user_login->Errors->Count());
-        $errors = ($errors || $this->s_first_name->Errors->Count());
         $errors = ($errors || $this->s_last_name->Errors->Count());
-        $errors = ($errors || $this->s_title->Errors->Count());
-        $errors = ($errors || $this->s_phone_home->Errors->Count());
-        $errors = ($errors || $this->s_phone_work->Errors->Count());
-        $errors = ($errors || $this->s_phone_day->Errors->Count());
-        $errors = ($errors || $this->s_phone_cell->Errors->Count());
-        $errors = ($errors || $this->s_phone_evening->Errors->Count());
-        $errors = ($errors || $this->s_fax->Errors->Count());
-        $errors = ($errors || $this->s_email->Errors->Count());
-        $errors = ($errors || $this->s_notes->Errors->Count());
-        $errors = ($errors || $this->s_card_number->Errors->Count());
-        $errors = ($errors || $this->s_card_expire_date->Errors->Count());
-        $errors = ($errors || $this->s_city->Errors->Count());
-        $errors = ($errors || $this->s_zip->Errors->Count());
-        $errors = ($errors || $this->s_address1->Errors->Count());
-        $errors = ($errors || $this->s_address2->Errors->Count());
-        $errors = ($errors || $this->s_address3->Errors->Count());
-        $errors = ($errors || $this->s_ip_add->Errors->Count());
-        $errors = ($errors || $this->s_ip_update->Errors->Count());
-        $errors = ($errors || $this->s_image_url->Errors->Count());
-        $errors = ($errors || $this->s_user_SSN->Errors->Count());
         $errors = ($errors || $this->Errors->Count());
         return $errors;
     }
@@ -223,7 +135,7 @@ class clsRecordusersSearch { //usersSearch Class @4-C4FF86BD
     }
 //End Operation Method
 
-//Show Method @4-41C51184
+//Show Method @4-D023157D
     function Show()
     {
         global $CCSUseAmp;
@@ -245,29 +157,7 @@ class clsRecordusersSearch { //usersSearch Class @4-C4FF86BD
 
         if($this->FormSubmitted || $this->CheckErrors()) {
             $Error = "";
-            $Error = ComposeStrings($Error, $this->s_user_login->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_first_name->Errors->ToString());
             $Error = ComposeStrings($Error, $this->s_last_name->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_title->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_phone_home->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_phone_work->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_phone_day->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_phone_cell->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_phone_evening->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_fax->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_email->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_notes->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_card_number->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_card_expire_date->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_city->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_zip->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_address1->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_address2->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_address3->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_ip_add->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_ip_update->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_image_url->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->s_user_SSN->Errors->ToString());
             $Error = ComposeStrings($Error, $this->Errors->ToString());
             $Tpl->SetVar("Error", $Error);
             $Tpl->Parse("Error", false);
@@ -286,29 +176,7 @@ class clsRecordusersSearch { //usersSearch Class @4-C4FF86BD
         }
 
         $this->Button_DoSearch->Show();
-        $this->s_user_login->Show();
-        $this->s_first_name->Show();
         $this->s_last_name->Show();
-        $this->s_title->Show();
-        $this->s_phone_home->Show();
-        $this->s_phone_work->Show();
-        $this->s_phone_day->Show();
-        $this->s_phone_cell->Show();
-        $this->s_phone_evening->Show();
-        $this->s_fax->Show();
-        $this->s_email->Show();
-        $this->s_notes->Show();
-        $this->s_card_number->Show();
-        $this->s_card_expire_date->Show();
-        $this->s_city->Show();
-        $this->s_zip->Show();
-        $this->s_address1->Show();
-        $this->s_address2->Show();
-        $this->s_address3->Show();
-        $this->s_ip_add->Show();
-        $this->s_ip_update->Show();
-        $this->s_image_url->Show();
-        $this->s_user_SSN->Show();
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
     }
