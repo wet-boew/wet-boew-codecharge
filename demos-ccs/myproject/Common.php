@@ -24,7 +24,7 @@ $CCConnectionSettings = array (
 );
 //End Connection Settings
 
-//Initialize Common Variables @0-49BAAAB9
+//Initialize Common Variables @0-8E1C7C4C
 $PHPVersion = explode(".",  phpversion());
 if (($PHPVersion[0] < 4) || ($PHPVersion[0] == 4  && $PHPVersion[1] < 1)) {
     echo "Sorry. This program requires PHP 4.1 and above to run. You may upgrade your php at <a href='http://www.php.net/downloads.php'>http://www.php.net/downloads.php</a>";
@@ -35,9 +35,9 @@ if (session_id() == "") { session_start(); }
 header('Pragma: ');
 header('Cache-control: ');
 header('Expires: ');
-define("TemplatePath", RelativePath);
-define("ServerURL", ((isset($_SERVER["HTTPS"]) && strtolower($_SERVER["HTTPS"]) == "on") ? "https://" : "http://" ). preg_replace("/:\d+$/", "", $_SERVER["HTTP_HOST"] ? $_SERVER["HTTP_HOST"] : $_SERVER["SERVER_NAME"]) . ($_SERVER["SERVER_PORT"] != 80 ? ":" . $_SERVER["SERVER_PORT"] : "") . substr($_SERVER["PHP_SELF"], 0, strlen($_SERVER["PHP_SELF"]) - strlen(PathToCurrentPage . FileName)) . "/");
-define("SecureURL", "");
+define("TemplatePath", RelativePath . "/template/");
+define("ServerURL", "http://localhost/myproject/");
+define("SecureURL", "https://localhost/myproject/");
 
 $FileEncoding = "UTF-8";
 $CCSIsXHTML = false;
@@ -49,7 +49,7 @@ $CCSLocales->AddLocale("en", Array("en", "US", array("Yes", "No", ""), 2, ".", "
 $CCSLocales->AddLocale("fr", Array("fr", "CA", array(1, 0, ""), 2, ",", " ", array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"), array("janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."), array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"), array("dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."), array("D", "L", "M", "M", "J", "V", "S"), array("yyyy", "-", "mm", "-", "dd"), array("d", " ", "mmmm", ", ", "yyyy"), array("HH", ":", "nn"), array("HH", ":", "nn", ":", "ss"), "", "", 0, false, "", "utf-8", "UTF-8", array(1, 7)));
 $CCSLocales->DefaultLocale = strtolower("en");
 $CCSLocales->Init();
-$Charset = $CCSLocales->GetFormatInfo("Encoding");
+$Charset = "utf-8";
 
 if ($PHPLocale = $CCSLocales->GetFormatInfo("PHPLocale"))
     setlocale(LC_ALL, $PHPLocale);
