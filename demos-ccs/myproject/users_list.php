@@ -186,7 +186,7 @@ class clsRecordusersSearch { //usersSearch Class @4-C4FF86BD
 
 class clsGridusers { //users class @30-0CB76799
 
-//Variables @30-3EC979B5
+//Variables @30-057E5FFC
 
     // Public variables
     public $ComponentType = "Grid";
@@ -216,42 +216,13 @@ class clsGridusers { //users class @30-0CB76799
     public $StaticControls;
     public $RowControls;
     public $Sorter_user_id;
-    public $Sorter_user_login;
     public $Sorter_first_name;
     public $Sorter_last_name;
-    public $Sorter_title;
-    public $Sorter_group_id;
     public $Sorter_phone_home;
-    public $Sorter_phone_work;
-    public $Sorter_phone_day;
-    public $Sorter_phone_cell;
-    public $Sorter_phone_evening;
-    public $Sorter_fax;
-    public $Sorter_email;
-    public $Sorter_card_number;
-    public $Sorter_card_expire_date;
-    public $Sorter_country_id;
-    public $Sorter_state_id;
-    public $Sorter_city;
-    public $Sorter_zip;
-    public $Sorter_address1;
-    public $Sorter_address2;
-    public $Sorter_address3;
-    public $Sorter_date_add;
-    public $Sorter_date_last_login;
-    public $Sorter_ip_add;
-    public $Sorter_ip_update;
-    public $Sorter_language_id;
-    public $Sorter_image_url;
-    public $Sorter_age_id;
-    public $Sorter_gender_id;
-    public $Sorter_education_id;
-    public $Sorter_income_id;
-    public $Sorter_user_SSN;
     public $Sorter_user_is_active;
 //End Variables
 
-//Class_Initialize Event @30-CA4E8295
+//Class_Initialize Event @30-4FDDF0A3
     function clsGridusers($RelativePath, & $Parent)
     {
         global $FileName;
@@ -282,75 +253,17 @@ class clsGridusers { //users class @30-0CB76799
 
         $this->user_id = new clsControl(ccsLink, "user_id", "user_id", ccsInteger, "", CCGetRequestParam("user_id", ccsGet, NULL), $this);
         $this->user_id->Page = "users_maint.php";
-        $this->user_login = new clsControl(ccsLabel, "user_login", "user_login", ccsText, "", CCGetRequestParam("user_login", ccsGet, NULL), $this);
         $this->first_name = new clsControl(ccsLabel, "first_name", "first_name", ccsText, "", CCGetRequestParam("first_name", ccsGet, NULL), $this);
         $this->last_name = new clsControl(ccsLabel, "last_name", "last_name", ccsText, "", CCGetRequestParam("last_name", ccsGet, NULL), $this);
-        $this->title = new clsControl(ccsLabel, "title", "title", ccsText, "", CCGetRequestParam("title", ccsGet, NULL), $this);
-        $this->group_id = new clsControl(ccsLabel, "group_id", "group_id", ccsInteger, "", CCGetRequestParam("group_id", ccsGet, NULL), $this);
         $this->phone_home = new clsControl(ccsLabel, "phone_home", "phone_home", ccsText, "", CCGetRequestParam("phone_home", ccsGet, NULL), $this);
-        $this->phone_work = new clsControl(ccsLabel, "phone_work", "phone_work", ccsText, "", CCGetRequestParam("phone_work", ccsGet, NULL), $this);
-        $this->phone_day = new clsControl(ccsLabel, "phone_day", "phone_day", ccsText, "", CCGetRequestParam("phone_day", ccsGet, NULL), $this);
-        $this->phone_cell = new clsControl(ccsLabel, "phone_cell", "phone_cell", ccsText, "", CCGetRequestParam("phone_cell", ccsGet, NULL), $this);
-        $this->phone_evening = new clsControl(ccsLabel, "phone_evening", "phone_evening", ccsText, "", CCGetRequestParam("phone_evening", ccsGet, NULL), $this);
-        $this->fax = new clsControl(ccsLabel, "fax", "fax", ccsText, "", CCGetRequestParam("fax", ccsGet, NULL), $this);
-        $this->email = new clsControl(ccsLabel, "email", "email", ccsText, "", CCGetRequestParam("email", ccsGet, NULL), $this);
-        $this->card_number = new clsControl(ccsLabel, "card_number", "card_number", ccsText, "", CCGetRequestParam("card_number", ccsGet, NULL), $this);
-        $this->card_expire_date = new clsControl(ccsLabel, "card_expire_date", "card_expire_date", ccsText, "", CCGetRequestParam("card_expire_date", ccsGet, NULL), $this);
-        $this->country_id = new clsControl(ccsLabel, "country_id", "country_id", ccsInteger, "", CCGetRequestParam("country_id", ccsGet, NULL), $this);
-        $this->state_id = new clsControl(ccsLabel, "state_id", "state_id", ccsInteger, "", CCGetRequestParam("state_id", ccsGet, NULL), $this);
-        $this->city = new clsControl(ccsLabel, "city", "city", ccsText, "", CCGetRequestParam("city", ccsGet, NULL), $this);
-        $this->zip = new clsControl(ccsLabel, "zip", "zip", ccsText, "", CCGetRequestParam("zip", ccsGet, NULL), $this);
-        $this->address1 = new clsControl(ccsLabel, "address1", "address1", ccsText, "", CCGetRequestParam("address1", ccsGet, NULL), $this);
-        $this->address2 = new clsControl(ccsLabel, "address2", "address2", ccsText, "", CCGetRequestParam("address2", ccsGet, NULL), $this);
-        $this->address3 = new clsControl(ccsLabel, "address3", "address3", ccsText, "", CCGetRequestParam("address3", ccsGet, NULL), $this);
-        $this->date_add = new clsControl(ccsLabel, "date_add", "date_add", ccsDate, $DefaultDateFormat, CCGetRequestParam("date_add", ccsGet, NULL), $this);
-        $this->date_last_login = new clsControl(ccsLabel, "date_last_login", "date_last_login", ccsDate, $DefaultDateFormat, CCGetRequestParam("date_last_login", ccsGet, NULL), $this);
-        $this->ip_add = new clsControl(ccsLabel, "ip_add", "ip_add", ccsText, "", CCGetRequestParam("ip_add", ccsGet, NULL), $this);
-        $this->ip_update = new clsControl(ccsLabel, "ip_update", "ip_update", ccsText, "", CCGetRequestParam("ip_update", ccsGet, NULL), $this);
-        $this->language_id = new clsControl(ccsLabel, "language_id", "language_id", ccsInteger, "", CCGetRequestParam("language_id", ccsGet, NULL), $this);
-        $this->image_url = new clsControl(ccsLabel, "image_url", "image_url", ccsText, "", CCGetRequestParam("image_url", ccsGet, NULL), $this);
-        $this->age_id = new clsControl(ccsLabel, "age_id", "age_id", ccsInteger, "", CCGetRequestParam("age_id", ccsGet, NULL), $this);
-        $this->gender_id = new clsControl(ccsLabel, "gender_id", "gender_id", ccsInteger, "", CCGetRequestParam("gender_id", ccsGet, NULL), $this);
-        $this->education_id = new clsControl(ccsLabel, "education_id", "education_id", ccsInteger, "", CCGetRequestParam("education_id", ccsGet, NULL), $this);
-        $this->income_id = new clsControl(ccsLabel, "income_id", "income_id", ccsInteger, "", CCGetRequestParam("income_id", ccsGet, NULL), $this);
-        $this->user_SSN = new clsControl(ccsLabel, "user_SSN", "user_SSN", ccsText, "", CCGetRequestParam("user_SSN", ccsGet, NULL), $this);
         $this->user_is_active = new clsControl(ccsLabel, "user_is_active", "user_is_active", ccsBoolean, $CCSLocales->GetFormatInfo("BooleanFormat"), CCGetRequestParam("user_is_active", ccsGet, NULL), $this);
         $this->users_Insert = new clsControl(ccsLink, "users_Insert", "users_Insert", ccsText, "", CCGetRequestParam("users_Insert", ccsGet, NULL), $this);
         $this->users_Insert->Parameters = CCGetQueryString("QueryString", array("user_id", "ccsForm"));
         $this->users_Insert->Page = "users_maint.php";
         $this->Sorter_user_id = new clsSorter($this->ComponentName, "Sorter_user_id", $FileName, $this);
-        $this->Sorter_user_login = new clsSorter($this->ComponentName, "Sorter_user_login", $FileName, $this);
         $this->Sorter_first_name = new clsSorter($this->ComponentName, "Sorter_first_name", $FileName, $this);
         $this->Sorter_last_name = new clsSorter($this->ComponentName, "Sorter_last_name", $FileName, $this);
-        $this->Sorter_title = new clsSorter($this->ComponentName, "Sorter_title", $FileName, $this);
-        $this->Sorter_group_id = new clsSorter($this->ComponentName, "Sorter_group_id", $FileName, $this);
         $this->Sorter_phone_home = new clsSorter($this->ComponentName, "Sorter_phone_home", $FileName, $this);
-        $this->Sorter_phone_work = new clsSorter($this->ComponentName, "Sorter_phone_work", $FileName, $this);
-        $this->Sorter_phone_day = new clsSorter($this->ComponentName, "Sorter_phone_day", $FileName, $this);
-        $this->Sorter_phone_cell = new clsSorter($this->ComponentName, "Sorter_phone_cell", $FileName, $this);
-        $this->Sorter_phone_evening = new clsSorter($this->ComponentName, "Sorter_phone_evening", $FileName, $this);
-        $this->Sorter_fax = new clsSorter($this->ComponentName, "Sorter_fax", $FileName, $this);
-        $this->Sorter_email = new clsSorter($this->ComponentName, "Sorter_email", $FileName, $this);
-        $this->Sorter_card_number = new clsSorter($this->ComponentName, "Sorter_card_number", $FileName, $this);
-        $this->Sorter_card_expire_date = new clsSorter($this->ComponentName, "Sorter_card_expire_date", $FileName, $this);
-        $this->Sorter_country_id = new clsSorter($this->ComponentName, "Sorter_country_id", $FileName, $this);
-        $this->Sorter_state_id = new clsSorter($this->ComponentName, "Sorter_state_id", $FileName, $this);
-        $this->Sorter_city = new clsSorter($this->ComponentName, "Sorter_city", $FileName, $this);
-        $this->Sorter_zip = new clsSorter($this->ComponentName, "Sorter_zip", $FileName, $this);
-        $this->Sorter_address1 = new clsSorter($this->ComponentName, "Sorter_address1", $FileName, $this);
-        $this->Sorter_address2 = new clsSorter($this->ComponentName, "Sorter_address2", $FileName, $this);
-        $this->Sorter_address3 = new clsSorter($this->ComponentName, "Sorter_address3", $FileName, $this);
-        $this->Sorter_date_add = new clsSorter($this->ComponentName, "Sorter_date_add", $FileName, $this);
-        $this->Sorter_date_last_login = new clsSorter($this->ComponentName, "Sorter_date_last_login", $FileName, $this);
-        $this->Sorter_ip_add = new clsSorter($this->ComponentName, "Sorter_ip_add", $FileName, $this);
-        $this->Sorter_ip_update = new clsSorter($this->ComponentName, "Sorter_ip_update", $FileName, $this);
-        $this->Sorter_language_id = new clsSorter($this->ComponentName, "Sorter_language_id", $FileName, $this);
-        $this->Sorter_image_url = new clsSorter($this->ComponentName, "Sorter_image_url", $FileName, $this);
-        $this->Sorter_age_id = new clsSorter($this->ComponentName, "Sorter_age_id", $FileName, $this);
-        $this->Sorter_gender_id = new clsSorter($this->ComponentName, "Sorter_gender_id", $FileName, $this);
-        $this->Sorter_education_id = new clsSorter($this->ComponentName, "Sorter_education_id", $FileName, $this);
-        $this->Sorter_income_id = new clsSorter($this->ComponentName, "Sorter_income_id", $FileName, $this);
-        $this->Sorter_user_SSN = new clsSorter($this->ComponentName, "Sorter_user_SSN", $FileName, $this);
         $this->Sorter_user_is_active = new clsSorter($this->ComponentName, "Sorter_user_is_active", $FileName, $this);
         $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpSimple, $this);
         $this->Navigator->PageSizes = array("1", "5", "10", "25", "50");
@@ -368,7 +281,7 @@ class clsGridusers { //users class @30-0CB76799
     }
 //End Initialize Method
 
-//Show Method @30-92D64040
+//Show Method @30-772A32F6
     function Show()
     {
         $Tpl = CCGetTemplate($this);
@@ -420,38 +333,9 @@ class clsGridusers { //users class @30-0CB76799
 
         if (!$this->IsEmpty) {
             $this->ControlsVisible["user_id"] = $this->user_id->Visible;
-            $this->ControlsVisible["user_login"] = $this->user_login->Visible;
             $this->ControlsVisible["first_name"] = $this->first_name->Visible;
             $this->ControlsVisible["last_name"] = $this->last_name->Visible;
-            $this->ControlsVisible["title"] = $this->title->Visible;
-            $this->ControlsVisible["group_id"] = $this->group_id->Visible;
             $this->ControlsVisible["phone_home"] = $this->phone_home->Visible;
-            $this->ControlsVisible["phone_work"] = $this->phone_work->Visible;
-            $this->ControlsVisible["phone_day"] = $this->phone_day->Visible;
-            $this->ControlsVisible["phone_cell"] = $this->phone_cell->Visible;
-            $this->ControlsVisible["phone_evening"] = $this->phone_evening->Visible;
-            $this->ControlsVisible["fax"] = $this->fax->Visible;
-            $this->ControlsVisible["email"] = $this->email->Visible;
-            $this->ControlsVisible["card_number"] = $this->card_number->Visible;
-            $this->ControlsVisible["card_expire_date"] = $this->card_expire_date->Visible;
-            $this->ControlsVisible["country_id"] = $this->country_id->Visible;
-            $this->ControlsVisible["state_id"] = $this->state_id->Visible;
-            $this->ControlsVisible["city"] = $this->city->Visible;
-            $this->ControlsVisible["zip"] = $this->zip->Visible;
-            $this->ControlsVisible["address1"] = $this->address1->Visible;
-            $this->ControlsVisible["address2"] = $this->address2->Visible;
-            $this->ControlsVisible["address3"] = $this->address3->Visible;
-            $this->ControlsVisible["date_add"] = $this->date_add->Visible;
-            $this->ControlsVisible["date_last_login"] = $this->date_last_login->Visible;
-            $this->ControlsVisible["ip_add"] = $this->ip_add->Visible;
-            $this->ControlsVisible["ip_update"] = $this->ip_update->Visible;
-            $this->ControlsVisible["language_id"] = $this->language_id->Visible;
-            $this->ControlsVisible["image_url"] = $this->image_url->Visible;
-            $this->ControlsVisible["age_id"] = $this->age_id->Visible;
-            $this->ControlsVisible["gender_id"] = $this->gender_id->Visible;
-            $this->ControlsVisible["education_id"] = $this->education_id->Visible;
-            $this->ControlsVisible["income_id"] = $this->income_id->Visible;
-            $this->ControlsVisible["user_SSN"] = $this->user_SSN->Visible;
             $this->ControlsVisible["user_is_active"] = $this->user_is_active->Visible;
             while ($this->ForceIteration || (($this->RowNumber < $this->PageSize) &&  ($this->HasRecord = $this->DataSource->has_next_record()))) {
                 $this->RowNumber++;
@@ -463,75 +347,17 @@ class clsGridusers { //users class @30-0CB76799
                 $this->user_id->SetValue($this->DataSource->user_id->GetValue());
                 $this->user_id->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
                 $this->user_id->Parameters = CCAddParam($this->user_id->Parameters, "user_id", $this->DataSource->f("user_id"));
-                $this->user_login->SetValue($this->DataSource->user_login->GetValue());
                 $this->first_name->SetValue($this->DataSource->first_name->GetValue());
                 $this->last_name->SetValue($this->DataSource->last_name->GetValue());
-                $this->title->SetValue($this->DataSource->title->GetValue());
-                $this->group_id->SetValue($this->DataSource->group_id->GetValue());
                 $this->phone_home->SetValue($this->DataSource->phone_home->GetValue());
-                $this->phone_work->SetValue($this->DataSource->phone_work->GetValue());
-                $this->phone_day->SetValue($this->DataSource->phone_day->GetValue());
-                $this->phone_cell->SetValue($this->DataSource->phone_cell->GetValue());
-                $this->phone_evening->SetValue($this->DataSource->phone_evening->GetValue());
-                $this->fax->SetValue($this->DataSource->fax->GetValue());
-                $this->email->SetValue($this->DataSource->email->GetValue());
-                $this->card_number->SetValue($this->DataSource->card_number->GetValue());
-                $this->card_expire_date->SetValue($this->DataSource->card_expire_date->GetValue());
-                $this->country_id->SetValue($this->DataSource->country_id->GetValue());
-                $this->state_id->SetValue($this->DataSource->state_id->GetValue());
-                $this->city->SetValue($this->DataSource->city->GetValue());
-                $this->zip->SetValue($this->DataSource->zip->GetValue());
-                $this->address1->SetValue($this->DataSource->address1->GetValue());
-                $this->address2->SetValue($this->DataSource->address2->GetValue());
-                $this->address3->SetValue($this->DataSource->address3->GetValue());
-                $this->date_add->SetValue($this->DataSource->date_add->GetValue());
-                $this->date_last_login->SetValue($this->DataSource->date_last_login->GetValue());
-                $this->ip_add->SetValue($this->DataSource->ip_add->GetValue());
-                $this->ip_update->SetValue($this->DataSource->ip_update->GetValue());
-                $this->language_id->SetValue($this->DataSource->language_id->GetValue());
-                $this->image_url->SetValue($this->DataSource->image_url->GetValue());
-                $this->age_id->SetValue($this->DataSource->age_id->GetValue());
-                $this->gender_id->SetValue($this->DataSource->gender_id->GetValue());
-                $this->education_id->SetValue($this->DataSource->education_id->GetValue());
-                $this->income_id->SetValue($this->DataSource->income_id->GetValue());
-                $this->user_SSN->SetValue($this->DataSource->user_SSN->GetValue());
                 $this->user_is_active->SetValue($this->DataSource->user_is_active->GetValue());
                 $this->Attributes->SetValue("rowNumber", $this->RowNumber);
                 $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShowRow", $this);
                 $this->Attributes->Show();
                 $this->user_id->Show();
-                $this->user_login->Show();
                 $this->first_name->Show();
                 $this->last_name->Show();
-                $this->title->Show();
-                $this->group_id->Show();
                 $this->phone_home->Show();
-                $this->phone_work->Show();
-                $this->phone_day->Show();
-                $this->phone_cell->Show();
-                $this->phone_evening->Show();
-                $this->fax->Show();
-                $this->email->Show();
-                $this->card_number->Show();
-                $this->card_expire_date->Show();
-                $this->country_id->Show();
-                $this->state_id->Show();
-                $this->city->Show();
-                $this->zip->Show();
-                $this->address1->Show();
-                $this->address2->Show();
-                $this->address3->Show();
-                $this->date_add->Show();
-                $this->date_last_login->Show();
-                $this->ip_add->Show();
-                $this->ip_update->Show();
-                $this->language_id->Show();
-                $this->image_url->Show();
-                $this->age_id->Show();
-                $this->gender_id->Show();
-                $this->education_id->Show();
-                $this->income_id->Show();
-                $this->user_SSN->Show();
                 $this->user_is_active->Show();
                 $Tpl->block_path = $ParentPath . "/" . $GridBlock;
                 $Tpl->parse("Row", true);
@@ -560,38 +386,9 @@ class clsGridusers { //users class @30-0CB76799
         }
         $this->users_Insert->Show();
         $this->Sorter_user_id->Show();
-        $this->Sorter_user_login->Show();
         $this->Sorter_first_name->Show();
         $this->Sorter_last_name->Show();
-        $this->Sorter_title->Show();
-        $this->Sorter_group_id->Show();
         $this->Sorter_phone_home->Show();
-        $this->Sorter_phone_work->Show();
-        $this->Sorter_phone_day->Show();
-        $this->Sorter_phone_cell->Show();
-        $this->Sorter_phone_evening->Show();
-        $this->Sorter_fax->Show();
-        $this->Sorter_email->Show();
-        $this->Sorter_card_number->Show();
-        $this->Sorter_card_expire_date->Show();
-        $this->Sorter_country_id->Show();
-        $this->Sorter_state_id->Show();
-        $this->Sorter_city->Show();
-        $this->Sorter_zip->Show();
-        $this->Sorter_address1->Show();
-        $this->Sorter_address2->Show();
-        $this->Sorter_address3->Show();
-        $this->Sorter_date_add->Show();
-        $this->Sorter_date_last_login->Show();
-        $this->Sorter_ip_add->Show();
-        $this->Sorter_ip_update->Show();
-        $this->Sorter_language_id->Show();
-        $this->Sorter_image_url->Show();
-        $this->Sorter_age_id->Show();
-        $this->Sorter_gender_id->Show();
-        $this->Sorter_education_id->Show();
-        $this->Sorter_income_id->Show();
-        $this->Sorter_user_SSN->Show();
         $this->Sorter_user_is_active->Show();
         $this->Navigator->Show();
         $Tpl->parse();
@@ -600,43 +397,14 @@ class clsGridusers { //users class @30-0CB76799
     }
 //End Show Method
 
-//GetErrors Method @30-C23E1066
+//GetErrors Method @30-562E84EB
     function GetErrors()
     {
         $errors = "";
         $errors = ComposeStrings($errors, $this->user_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->user_login->Errors->ToString());
         $errors = ComposeStrings($errors, $this->first_name->Errors->ToString());
         $errors = ComposeStrings($errors, $this->last_name->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->title->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->group_id->Errors->ToString());
         $errors = ComposeStrings($errors, $this->phone_home->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->phone_work->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->phone_day->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->phone_cell->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->phone_evening->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->fax->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->email->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->card_number->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->card_expire_date->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->country_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->state_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->city->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->zip->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->address1->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->address2->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->address3->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->date_add->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->date_last_login->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->ip_add->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->ip_update->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->language_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->image_url->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->age_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->gender_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->education_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->income_id->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->user_SSN->Errors->ToString());
         $errors = ComposeStrings($errors, $this->user_is_active->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Errors->ToString());
         $errors = ComposeStrings($errors, $this->DataSource->Errors->ToString());
@@ -648,7 +416,7 @@ class clsGridusers { //users class @30-0CB76799
 
 class clsusersDataSource extends clsDBmyproject {  //usersDataSource Class @30-450B5E7B
 
-//DataSource Variables @30-1CBDF8DF
+//DataSource Variables @30-131EFBC7
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -661,42 +429,13 @@ class clsusersDataSource extends clsDBmyproject {  //usersDataSource Class @30-4
 
     // Datasource fields
     public $user_id;
-    public $user_login;
     public $first_name;
     public $last_name;
-    public $title;
-    public $group_id;
     public $phone_home;
-    public $phone_work;
-    public $phone_day;
-    public $phone_cell;
-    public $phone_evening;
-    public $fax;
-    public $email;
-    public $card_number;
-    public $card_expire_date;
-    public $country_id;
-    public $state_id;
-    public $city;
-    public $zip;
-    public $address1;
-    public $address2;
-    public $address3;
-    public $date_add;
-    public $date_last_login;
-    public $ip_add;
-    public $ip_update;
-    public $language_id;
-    public $image_url;
-    public $age_id;
-    public $gender_id;
-    public $education_id;
-    public $income_id;
-    public $user_SSN;
     public $user_is_active;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @30-04BEB5AC
+//DataSourceClass_Initialize Event @30-1EF3176E
     function clsusersDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -704,69 +443,11 @@ class clsusersDataSource extends clsDBmyproject {  //usersDataSource Class @30-4
         $this->Initialize();
         $this->user_id = new clsField("user_id", ccsInteger, "");
         
-        $this->user_login = new clsField("user_login", ccsText, "");
-        
         $this->first_name = new clsField("first_name", ccsText, "");
         
         $this->last_name = new clsField("last_name", ccsText, "");
         
-        $this->title = new clsField("title", ccsText, "");
-        
-        $this->group_id = new clsField("group_id", ccsInteger, "");
-        
         $this->phone_home = new clsField("phone_home", ccsText, "");
-        
-        $this->phone_work = new clsField("phone_work", ccsText, "");
-        
-        $this->phone_day = new clsField("phone_day", ccsText, "");
-        
-        $this->phone_cell = new clsField("phone_cell", ccsText, "");
-        
-        $this->phone_evening = new clsField("phone_evening", ccsText, "");
-        
-        $this->fax = new clsField("fax", ccsText, "");
-        
-        $this->email = new clsField("email", ccsText, "");
-        
-        $this->card_number = new clsField("card_number", ccsText, "");
-        
-        $this->card_expire_date = new clsField("card_expire_date", ccsText, "");
-        
-        $this->country_id = new clsField("country_id", ccsInteger, "");
-        
-        $this->state_id = new clsField("state_id", ccsInteger, "");
-        
-        $this->city = new clsField("city", ccsText, "");
-        
-        $this->zip = new clsField("zip", ccsText, "");
-        
-        $this->address1 = new clsField("address1", ccsText, "");
-        
-        $this->address2 = new clsField("address2", ccsText, "");
-        
-        $this->address3 = new clsField("address3", ccsText, "");
-        
-        $this->date_add = new clsField("date_add", ccsDate, $this->DateFormat);
-        
-        $this->date_last_login = new clsField("date_last_login", ccsDate, $this->DateFormat);
-        
-        $this->ip_add = new clsField("ip_add", ccsText, "");
-        
-        $this->ip_update = new clsField("ip_update", ccsText, "");
-        
-        $this->language_id = new clsField("language_id", ccsInteger, "");
-        
-        $this->image_url = new clsField("image_url", ccsText, "");
-        
-        $this->age_id = new clsField("age_id", ccsInteger, "");
-        
-        $this->gender_id = new clsField("gender_id", ccsInteger, "");
-        
-        $this->education_id = new clsField("education_id", ccsInteger, "");
-        
-        $this->income_id = new clsField("income_id", ccsInteger, "");
-        
-        $this->user_SSN = new clsField("user_SSN", ccsText, "");
         
         $this->user_is_active = new clsField("user_is_active", ccsBoolean, $this->BooleanFormat);
         
@@ -774,44 +455,15 @@ class clsusersDataSource extends clsDBmyproject {  //usersDataSource Class @30-4
     }
 //End DataSourceClass_Initialize Event
 
-//SetOrder Method @30-6DF1FCC0
+//SetOrder Method @30-E0BB0FF5
     function SetOrder($SorterName, $SorterDirection)
     {
         $this->Order = "";
         $this->Order = CCGetOrder($this->Order, $SorterName, $SorterDirection, 
             array("Sorter_user_id" => array("user_id", ""), 
-            "Sorter_user_login" => array("user_login", ""), 
             "Sorter_first_name" => array("first_name", ""), 
             "Sorter_last_name" => array("last_name", ""), 
-            "Sorter_title" => array("title", ""), 
-            "Sorter_group_id" => array("group_id", ""), 
             "Sorter_phone_home" => array("phone_home", ""), 
-            "Sorter_phone_work" => array("phone_work", ""), 
-            "Sorter_phone_day" => array("phone_day", ""), 
-            "Sorter_phone_cell" => array("phone_cell", ""), 
-            "Sorter_phone_evening" => array("phone_evening", ""), 
-            "Sorter_fax" => array("fax", ""), 
-            "Sorter_email" => array("email", ""), 
-            "Sorter_card_number" => array("card_number", ""), 
-            "Sorter_card_expire_date" => array("card_expire_date", ""), 
-            "Sorter_country_id" => array("country_id", ""), 
-            "Sorter_state_id" => array("state_id", ""), 
-            "Sorter_city" => array("city", ""), 
-            "Sorter_zip" => array("zip", ""), 
-            "Sorter_address1" => array("address1", ""), 
-            "Sorter_address2" => array("address2", ""), 
-            "Sorter_address3" => array("address3", ""), 
-            "Sorter_date_add" => array("date_add", ""), 
-            "Sorter_date_last_login" => array("date_last_login", ""), 
-            "Sorter_ip_add" => array("ip_add", ""), 
-            "Sorter_ip_update" => array("ip_update", ""), 
-            "Sorter_language_id" => array("language_id", ""), 
-            "Sorter_image_url" => array("image_url", ""), 
-            "Sorter_age_id" => array("age_id", ""), 
-            "Sorter_gender_id" => array("gender_id", ""), 
-            "Sorter_education_id" => array("education_id", ""), 
-            "Sorter_income_id" => array("income_id", ""), 
-            "Sorter_user_SSN" => array("user_SSN", ""), 
             "Sorter_user_is_active" => array("user_is_active", "")));
     }
 //End SetOrder Method
@@ -938,42 +590,13 @@ class clsusersDataSource extends clsDBmyproject {  //usersDataSource Class @30-4
     }
 //End Open Method
 
-//SetValues Method @30-A53BB5EE
+//SetValues Method @30-2296B48E
     function SetValues()
     {
         $this->user_id->SetDBValue(trim($this->f("user_id")));
-        $this->user_login->SetDBValue($this->f("user_login"));
         $this->first_name->SetDBValue($this->f("first_name"));
         $this->last_name->SetDBValue($this->f("last_name"));
-        $this->title->SetDBValue($this->f("title"));
-        $this->group_id->SetDBValue(trim($this->f("group_id")));
         $this->phone_home->SetDBValue($this->f("phone_home"));
-        $this->phone_work->SetDBValue($this->f("phone_work"));
-        $this->phone_day->SetDBValue($this->f("phone_day"));
-        $this->phone_cell->SetDBValue($this->f("phone_cell"));
-        $this->phone_evening->SetDBValue($this->f("phone_evening"));
-        $this->fax->SetDBValue($this->f("fax"));
-        $this->email->SetDBValue($this->f("email"));
-        $this->card_number->SetDBValue($this->f("card_number"));
-        $this->card_expire_date->SetDBValue($this->f("card_expire_date"));
-        $this->country_id->SetDBValue(trim($this->f("country_id")));
-        $this->state_id->SetDBValue(trim($this->f("state_id")));
-        $this->city->SetDBValue($this->f("city"));
-        $this->zip->SetDBValue($this->f("zip"));
-        $this->address1->SetDBValue($this->f("address1"));
-        $this->address2->SetDBValue($this->f("address2"));
-        $this->address3->SetDBValue($this->f("address3"));
-        $this->date_add->SetDBValue(trim($this->f("date_add")));
-        $this->date_last_login->SetDBValue(trim($this->f("date_last_login")));
-        $this->ip_add->SetDBValue($this->f("ip_add"));
-        $this->ip_update->SetDBValue($this->f("ip_update"));
-        $this->language_id->SetDBValue(trim($this->f("language_id")));
-        $this->image_url->SetDBValue($this->f("image_url"));
-        $this->age_id->SetDBValue(trim($this->f("age_id")));
-        $this->gender_id->SetDBValue(trim($this->f("gender_id")));
-        $this->education_id->SetDBValue(trim($this->f("education_id")));
-        $this->income_id->SetDBValue(trim($this->f("income_id")));
-        $this->user_SSN->SetDBValue($this->f("user_SSN"));
         $this->user_is_active->SetDBValue(trim($this->f("user_is_active")));
     }
 //End SetValues Method
