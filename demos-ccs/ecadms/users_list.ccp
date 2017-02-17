@@ -1,4 +1,4 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="True" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" masterPage="{CCS_PathToMasterPage}/MasterPage.ccp" useDesign="True" wizardTheme="None" needGeneration="0">
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" masterPage="{CCS_PathToMasterPage}/MasterPage.ccp" useDesign="True" wizardTheme="None" needGeneration="0">
 	<Components>
 		<Panel id="162" visible="True" generateDiv="False" name="Head" contentPlaceholder="Head">
 			<Components/>
@@ -340,6 +340,7 @@
 								</Sorter>
 								<Sorter id="81" visible="True" name="Sorter_ip_update" column="ip_update" wizardCaption="{res:ip_update}" wizardSortingType="SimpleDir" wizardControl="ip_update" wizardAddNbsp="False" PathID="ContentPanel1usersSorter_ip_update">
 									<Components/>
+
 									<Events/>
 									<Attributes/>
 									<Features/>
@@ -729,11 +730,11 @@
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Events" language="PHPTemplates" name="users_list_events.php" forShow="False" comment="//" codePage="utf-8"/>
-<CodeFile id="Code" language="PHPTemplates" name="users_list.php" forShow="True" url="users_list.php" comment="//" codePage="utf-8"/>
-</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="users_list.php" forShow="True" url="users_list.php" comment="//" codePage="utf-8"/>
+	</CodeFiles>
 	<SecurityGroups>
-		<Group id="161" groupID="1"/>
-	</SecurityGroups>
+		<Group id="168" groupID="1"/>
+</SecurityGroups>
 	<CachingParameters/>
 	<Attributes/>
 	<Features/>

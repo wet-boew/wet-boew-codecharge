@@ -1,4 +1,4 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="True" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" masterPage="{CCS_PathToMasterPage}/MasterPage.ccp" useDesign="True" wizardTheme="None" needGeneration="0">
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" masterPage="{CCS_PathToMasterPage}/MasterPage.ccp" useDesign="True" wizardTheme="None" needGeneration="0">
 	<Components>
 		<Panel id="121" visible="True" generateDiv="False" name="Head" contentPlaceholder="Head">
 			<Components/>
@@ -210,6 +210,7 @@
 						</TextBox>
 						<TextBox id="38" visible="Yes" fieldSourceType="DBColumn" dataType="Text" name="ip_add" fieldSource="ip_add" required="False" wizardIsPassword="False" parentName="users" wizardCaption="{res:ip_add}" caption="{res:ip_add}" unique="False" wizardSize="50" wizardMaxLength="50" PathID="Contentusersip_add">
 							<Components/>
+
 							<Events/>
 							<Attributes/>
 							<Features/>
@@ -421,8 +422,8 @@
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Events" language="PHPTemplates" name="users_maint_events.php" forShow="False" comment="//" codePage="utf-8"/>
-<CodeFile id="Code" language="PHPTemplates" name="users_maint.php" forShow="True" url="users_maint.php" comment="//" codePage="utf-8"/>
-</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="users_maint.php" forShow="True" url="users_maint.php" comment="//" codePage="utf-8"/>
+	</CodeFiles>
 	<SecurityGroups>
 		<Group id="120" groupID="10"/>
 	</SecurityGroups>

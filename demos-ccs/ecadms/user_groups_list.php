@@ -486,10 +486,6 @@ $Scripts = "|js/jquery/jquery.js|js/jquery/event-manager.js|js/jquery/selectors.
 $Charset = $Charset ? $Charset : "utf-8";
 //End Initialize Page
 
-//Authenticate User @1-4CBB5244
-CCSecurityRedirect("10", "");
-//End Authenticate User
-
 //Include events file @1-E00B29E3
 include_once("./user_groups_list_events.php");
 //End Include events file

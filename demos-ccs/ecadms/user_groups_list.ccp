@@ -1,4 +1,4 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="True" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" masterPage="{CCS_PathToMasterPage}/MasterPage.ccp" useDesign="True" wizardTheme="None" needGeneration="0">
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" masterPage="{CCS_PathToMasterPage}/MasterPage.ccp" useDesign="True" wizardTheme="None" needGeneration="0">
 	<Components>
 		<Panel id="22" visible="True" generateDiv="False" name="Head" contentPlaceholder="Head">
 			<Components/>
@@ -159,8 +159,8 @@
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Events" language="PHPTemplates" name="user_groups_list_events.php" forShow="False" comment="//" codePage="utf-8"/>
-<CodeFile id="Code" language="PHPTemplates" name="user_groups_list.php" forShow="True" url="user_groups_list.php" comment="//" codePage="utf-8"/>
-</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="user_groups_list.php" forShow="True" url="user_groups_list.php" comment="//" codePage="utf-8"/>
+	</CodeFiles>
 	<SecurityGroups>
 		<Group id="21" groupID="10"/>
 	</SecurityGroups>

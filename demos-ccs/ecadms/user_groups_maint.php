@@ -439,10 +439,6 @@ $Scripts = "|";
 $Charset = $Charset ? $Charset : "utf-8";
 //End Initialize Page
 
-//Authenticate User @1-4CBB5244
-CCSecurityRedirect("10", "");
-//End Authenticate User
-
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
