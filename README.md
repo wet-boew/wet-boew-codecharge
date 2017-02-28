@@ -35,8 +35,9 @@ Application can be generated to run on IIS or Apache web server, and to support 
 
 Codecharge variant provides re-usable Master Templates for CodeCharge Studio 5 (CCS5). the Template provided supports CCS5 php generated sites.
 Demo provided was generated in php, using the Master Template.
-In the Codecharge variant, Html and php code files are completely separated (.php and .html), keeping a clear separation between presentation and code. They are merged dynamically on demand.
-On-going effort to sync the resource variables used in both rojects.
+In the Codecharge variant, Html and php code files are completely separated (.php and .html), keeping a clear separation between presentation and code.
+
+Synchronization of the resource variables used (languages) in both projects on ToDo list.
 
 * Demo environment tailoring**
 
