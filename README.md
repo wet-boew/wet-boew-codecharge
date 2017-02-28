@@ -3,7 +3,7 @@ wet-boew-codecharge
 
 CodeCharge Studio variant of the Web Experience Toolkit (WET)
 <br />
-Demo site: http://wet-boew-php.azurewebsites.net/demos-ccs (???)
+Demo site: TBD
 
 Version: WET 4.0.X
 
