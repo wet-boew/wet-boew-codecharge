@@ -7,14 +7,14 @@ include(RelativePath . "/db_adapter.php");
 
 //Connection Settings @0-857B06A8
 $CCConnectionSettings = array (
-    "myproject" => array(
+    "basic_mysql_php" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
-        "Database" => "myproject",
+        "Database" => "demo-ccs",
         "Host" => "localhost",
-        "Port" => "3306;Database=myproject",
-        "User" => "application",
-        "Password" => "password",
+        "Port" => "3306;Database=intranet",
+        "User" => "demo-ccs",
+        "Password" => "vjwbqRCxPAm9fTHjJVyGLtsZ",
         "Encoding" => array("", "utf8"),
         "Persistent" => false,
         "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
@@ -35,9 +35,9 @@ if (session_id() == "") { session_start(); }
 header('Pragma: ');
 header('Cache-control: ');
 header('Expires: ');
-define("TemplatePath", RelativePath . "/template/");
-define("ServerURL", "http://localhost/myproject/");
-define("SecureURL", "https://localhost/myproject/");
+define("TemplatePath", RelativePath . "/Template/");
+define("ServerURL", "http://localhost/demo-ccs/myproject/");
+define("SecureURL", "https://localhost/demo-ccs/myproject/");
 
 $FileEncoding = "UTF-8";
 $CCSIsXHTML = false;
