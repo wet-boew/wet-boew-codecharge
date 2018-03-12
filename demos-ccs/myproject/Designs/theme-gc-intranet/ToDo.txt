@@ -1,9 +1,0 @@
-This CCS5 design theme is based on them-gc-intranet
-unmin files were used and the compact one removed.
-
-
-left to do:
-
-Create a language text file for each language supported by the theme.
-
-FIx all demos and template file to be only one pair (.html,.php), ready for multi-language support using CCS variables.

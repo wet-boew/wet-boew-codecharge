@@ -1,1 +1,0 @@
-Copy all the files at the beginning of your new codechargestudio project.
