@@ -7,7 +7,7 @@ include(RelativePath . "/db_adapter.php");
 
 //Connection Settings @0-857B06A8
 $CCConnectionSettings = array (
-    "basic_mysql_php" => array(
+    "myproject" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
         "Database" => "demo-ccs",
