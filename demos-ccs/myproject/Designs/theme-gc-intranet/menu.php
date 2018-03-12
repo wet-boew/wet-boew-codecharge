@@ -1,12 +1,11 @@
 <?php
-
 //Error reporting @1-8F636958
 error_reporting(E_ALL | E_STRICT);
 //End Error reporting
 
-class clsBlockTemplate { //BlockTemplate class @1-17E84031
+class clsmenu { //menu class @1-F157D0AE
 
-//Variables @1-6DB8BB64
+//Variables @1-EEEBE252
     public $ComponentType = "IncludablePage";
     public $Connections = array();
     public $FileName = "";
@@ -16,9 +15,6 @@ class clsBlockTemplate { //BlockTemplate class @1-17E84031
     public $BlockToParse = "";
     public $ComponentName = "";
     public $Attributes = "";
-    public $PathToCurrentMasterPage = "";
-    public $TemplatePathValue = "";
-    public $HTML;
 
     // Events;
     public $CCSEvents = "";
@@ -29,8 +25,8 @@ class clsBlockTemplate { //BlockTemplate class @1-17E84031
     public $TemplateSource;
 //End Variables
 
-//Class_Initialize Event @1-907B3647
-    function clsBlockTemplate($RelativePath, $ComponentName, & $Parent)
+//Class_Initialize Event @1-9E12F55B
+    function clsmenu($RelativePath, $ComponentName, & $Parent)
     {
         global $CCSLocales;
         global $DefaultDateFormat;
@@ -38,9 +34,9 @@ class clsBlockTemplate { //BlockTemplate class @1-17E84031
         $this->RelativePath = $RelativePath;
         $this->Visible = true;
         $this->Parent = & $Parent;
-        $this->FileName = "BlockTemplate.php";
+        $this->FileName = "menu.php";
         $this->Redirect = "";
-        $this->TemplateFileName = "BlockTemplate.html";
+        $this->TemplateFileName = "menu.html";
         $this->BlockToParse = "main";
         $this->TemplateEncoding = "UTF-8";
         $this->ContentType = "text/html";
@@ -70,15 +66,12 @@ class clsBlockTemplate { //BlockTemplate class @1-17E84031
     }
 //End Operations Method
 
-//Initialize Method @1-7AF43959
+//Initialize Method @1-29AB763D
     function Initialize($Path = "")
     {
         global $FileName;
         global $CCSLocales;
         global $DefaultDateFormat;
-        global $PathToCurrentMasterPage;
-        $this->TemplatePathValue = $Path;
-        $PathToCurrentMasterPage = $this->RelativePath;
         global $Scripts;
         $IncScripts = "|";
         $SList = explode("|", $IncScripts);
@@ -89,45 +82,39 @@ class clsBlockTemplate { //BlockTemplate class @1-17E84031
         if(!$this->Visible)
             return "";
         $this->Attributes = & $this->Parent->Attributes;
-
-        // Create Components
-        $this->Title = new clsPanel("Title", $this);
-        $this->Title->isContentPlaceholder = true;
-        $this->Content = new clsPanel("Content", $this);
-        $this->Content->isContentPlaceholder = true;
         $this->BindEvents();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnInitializeView", $this);
-        $this->Tpl = new clsTemplate();
-        if ($this->TemplateSource) {
-            $this->Tpl->LoadTemplateFromStr($this->TemplateSource, "main", $this->TemplateEncoding);
-        } else {
-            $this->Tpl->LoadTemplate($this->RelativePath . $this->TemplateFileName, "main", $this->TemplateEncoding);
-        }
     }
 //End Initialize Method
 
-//Show Method @1-D77CB2D6
+//Show Method @1-655E81BF
     function Show()
     {
+        global $Tpl;
         global $CCSLocales;
-        $this->Tpl->block_path = "/main";
+        $block_path = $Tpl->block_path;
+        if ($this->TemplateSource) {
+            $Tpl->LoadTemplateFromStr($this->TemplateSource, $this->ComponentName, $this->TemplateEncoding);
+        } else {
+            $Tpl->LoadTemplate("/Designs/theme-gc-intranet/" . $this->TemplateFileName, $this->ComponentName, $this->TemplateEncoding, "remove");
+        }
+        $Tpl->block_path = $Tpl->block_path . "/" . $this->ComponentName;
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
         if(!$this->Visible) {
-            $this->Tpl->block_path = $block_path;
-            $this->Tpl->SetVar($this->ComponentName, "");
+            $Tpl->block_path = $block_path;
+            $Tpl->SetVar($this->ComponentName, "");
             return "";
         }
-        $this->Tpl->SetVar("CCS_PathToCurrentPage", RelativePath . $this->RelativePath);
-        $this->Tpl->SetVar("page:pathToCurrentPage", RelativePath . $this->RelativePath);
         $this->Attributes->Show();
-        $this->Tpl->block_path = "";
-        $this->Tpl->Parse("main", false);
-        $this->HTML = $this->Tpl->GetVar("main");
+        $Tpl->Parse();
+        $Tpl->block_path = $block_path;
+        $TplData = $Tpl->GetVar($this->ComponentName);
+        $Tpl->SetVar($this->ComponentName, $TplData);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeOutput", $this);
     }
 //End Show Method
 
-} //End BlockTemplate Class @1-FCB6E20C
+} //End menu Class @1-FCB6E20C
 
 
 ?>

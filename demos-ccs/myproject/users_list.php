@@ -1,4 +1,9 @@
 <?php
+
+//Error reporting @1-8F636958
+error_reporting(E_ALL | E_STRICT);
+//End Error reporting
+
 //Include Common Files @1-C43A8E7E
 define("RelativePath", ".");
 define("PathToCurrentPage", "/");
@@ -746,7 +751,7 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-E24D7EEF
+//Show Page @1-9F774BF3
 $Head->Show();
 $Content->Show();
 $Menu->Show();
@@ -759,6 +764,13 @@ $MasterPage->Tpl->SetVar("Sidebar1", $Tpl->GetVar("Panel Sidebar1"));
 $MasterPage->Tpl->SetVar("HeaderSidebar", $Tpl->GetVar("Panel HeaderSidebar"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
+if(preg_match("/<\/body>/i", $main_block)) {
+    $main_block = preg_replace("/<\/body>/i", implode(array("<center><font face=\"Arial\"><small>G&", "#101;ner&#97;ted <!-- SCC -->wit&#104;", " <!-- SCC -->Co&#100;&#101;&#67;harg", "e <!-- SCC -->S&#116;ud&#105;&#111;.", "</small></font></center>"), "") . "</body>", $main_block);
+} else if(preg_match("/<\/html>/i", $main_block) && !preg_match("/<\/frameset>/i", $main_block)) {
+    $main_block = preg_replace("/<\/html>/i", implode(array("<center><font face=\"Arial\"><small>G&", "#101;ner&#97;ted <!-- SCC -->wit&#104;", " <!-- SCC -->Co&#100;&#101;&#67;harg", "e <!-- SCC -->S&#116;ud&#105;&#111;.", "</small></font></center>"), "") . "</html>", $main_block);
+} else if(!preg_match("/<\/frameset>/i", $main_block)) {
+    $main_block .= implode(array("<center><font face=\"Arial\"><small>G&", "#101;ner&#97;ted <!-- SCC -->wit&#104;", " <!-- SCC -->Co&#100;&#101;&#67;harg", "e <!-- SCC -->S&#116;ud&#105;&#111;.", "</small></font></center>"), "");
+}
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;

@@ -1,4 +1,9 @@
 <?php
+
+//Error reporting @1-8F636958
+error_reporting(E_ALL | E_STRICT);
+//End Error reporting
+
 class clsMasterPage { //MasterPage class @1-BFE8F48A
 
 //Variables @1-6DB8BB64

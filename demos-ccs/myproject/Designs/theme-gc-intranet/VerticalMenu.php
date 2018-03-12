@@ -1,4 +1,9 @@
 <?php
+
+//Error reporting @1-8F636958
+error_reporting(E_ALL | E_STRICT);
+//End Error reporting
+
 class clsVerticalMenu { //VerticalMenu class @1-4B8F1AB5
 
 //Variables @1-6DB8BB64
