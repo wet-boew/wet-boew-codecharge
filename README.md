@@ -5,12 +5,12 @@ CodeCharge Studio variant of the Web Experience Toolkit (WET)
 <br />
 Demo site: http://wet-boew-php.azurewebsites.net/demos-ccs (???)
 
-Version: WET 3.1.X
+Version: WET 4.1.X
 
 ## Overview
 
-This features WET based Design templates for use with YesSoftware CodeCharge Studio 5.x (CCS).
-CCS facilitates Rapid web Application Development (RAD) in ASP, dotnet, Coldfusion, JSP, Perl,or php.
+This variant features WET based Design templates for use with YesSoftware CodeCharge Studio 5.x (CCS).
+CCS is a COTS that facilitates Rapid web Application Development (RAD) in ASP, dotnet, Coldfusion, JSP, Perl,or php.
 Application can be generated to run on IIS or Apache web server, and to support a variety of databases (MySQL, Oracle, DB2, MSSQL, PostgreSQL,...). Default language and DBMS for provided Design templates are php/MySQL, the most common one.
 
 ##Benefits
