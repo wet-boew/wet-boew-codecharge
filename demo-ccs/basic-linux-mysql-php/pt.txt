@@ -1,0 +1,6 @@
+CCS_LanguageID=pt
+CCS_LocaleID=pt
+gcwu_gcnb_lang_reverse=English
+gcwu_gcnb_lang_reverse2=en
+locale=pt
+locale3=ptu

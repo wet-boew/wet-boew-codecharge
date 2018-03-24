@@ -1,2 +1,23 @@
-demos-ccs/myproject/~test20.html
-*.html
+# Project key files types 
+#*.xml
+#*.php
+#*.ccs
+#*.ccp
+#*.html
+#*.js
+#*.jpg
+#*.txt
+#*.css
+
+# Temp files
+~*.*
+._*
+.*
+.Trashes
+ethumbs.db
+Thumbs.db
+*.orig
+*.tmp
+*.log
+*.bak
+*.lnk
