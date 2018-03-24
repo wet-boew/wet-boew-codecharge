@@ -1,8 +1,8 @@
 REM =================================
 REM DEV build and install process 
 REM =================================
-REM purpose: install demo-ccs application on localhost for TEST only.
-REM production installation requires ususally more considerations (file priviledges, MySQL user management,...)
+REM purpose: install demo-ccs application on localhost for demonstration only. 
+REM production installation requires will require more considerations (file priviledges, MySQL user management,...)
 REM ---------------------------------
 REM Overview
 REM ---------------------------------
@@ -33,4 +33,3 @@ REM (Re-)install demo-ccs from local directory where this file reside.
 REM MKDIR %WWW%\%DEMO%
 XCOPY /S /D .\*.* %WWW%\%DEMO%
 PAUSE
-
