@@ -45,5 +45,3 @@ FILES
 * dist-ccs\demo-ccs:	Folder that contains a generated demo application, using the re-useable design component (clf)
 * dist-ccs\dist-ccs:	Folder that contains the re-useable CodeChargeStudio 5.X Design Templates, 
 						starting with theme-gcwu-intranet
-
-
